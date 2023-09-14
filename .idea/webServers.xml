@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9e2cc89a-c30b-4927-aa6d-7d88a773ef79" name="TR" url="http://145.118.2.73">
+        <fileTransfer rootFolder="/httpdocs/Opdrachten/Jaar2/Beroeps/Verzamelaar_89137" host="145.118.2.73" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

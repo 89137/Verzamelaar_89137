@@ -1,3 +1,29 @@
+<?php
+$servername = "localhost:3306";
+$username = "89137";
+$password = "ditiseenww";
+$database = "db_89137";
+
+// Create a connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Function to fetch text by ID
+function getTextById($conn, $id) {
+    // SQL query to fetch text data for the given ID
+    $sql = "SELECT content FROM verzamelaar WHERE id = " . $id; // Change the query as needed
+
+    $result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+$row = $result->fetch_assoc();
+return $row["content"];
+}
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,13 +40,10 @@
         <a class="active" href=""><img src="" alt=""></a>
         
         <ul class="a"> </ul>
-        <li> <a class="active" href="">1</a> </li>
+        <li> <a class="active" href="">Items</a> </li>
 
-        <li> <a class="active" href="">2</a> </li>
-    
-        <li> <a class="active" href="">3</a> </li>
+        <li> <a class="active" href="">Bestel</a> </li>
 
-        <li> <a class="active" href="">4</a> </li>
         </ul>
         
       </div>

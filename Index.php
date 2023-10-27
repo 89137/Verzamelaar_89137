@@ -32,7 +32,7 @@ function getFullColumn($conn) {
             echo '<h2>Uitkomst:</h2><p>' . $row["uitkomst"] . '</p>';
             echo '<h2>Rated:</h2><p> ' . $row["hoofdspeler"] . '</p>';
             echo '<h2>Genre: </h2><p>' . $row["genre"] . '</p>';
-            echo '<h1>Order</h1><br>';
+            echo '<button class="Order" onclick="addToCart(' . $row["id"] . ', \'' . $row["naam"] . '\')">AddToCart</button>';
             echo '</div>';
             echo '</div>';
 
@@ -62,6 +62,21 @@ function getFullColumn($conn) {
 
         <li><a class="active" href="#items">Items</a></li>
         <li><a class="active" href="#bestel">Bestel</a></li>
+
+        <li>
+            <!-- Add a shopping cart icon in the navbar -->
+            <div id="cart" onmouseover="showCartItems()" onmouseout="hideCartItems()">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Shopping Cart: <span id="cart-count">0</span> items</span>
+                <div class="cart-tooltip" id="cart-tooltip">
+
+                        <!-- Selected items will be displayed here -->
+                        <ul id="cart-items" class="hidden">
+                            <!-- Selected items will be displayed here -->
+                        </ul>
+
+            </div>
+        </li>
     </div>
 
 
@@ -69,7 +84,7 @@ function getFullColumn($conn) {
     <section class="spacing" id="items"></section>
     <h2>Item overzicht</h2>
     <section class="spacing2"></section>
-    <h2>Click on images to display info</h2>
+    <h2>Click on images to display info/order</h2>
     <section class="spacing2"></section>
     <div class="data-boxes">
         <?php
@@ -79,7 +94,13 @@ function getFullColumn($conn) {
     </div>
 
     <section class="spacing" id="bestel"></section>
-    <h2>BestelFunctie</h2>
+
+
+    <!-- Add a shopping cart section that is initially hidden -->
+    <div class="shopping-cart" id="cart">
+        <button id="placeOrderButton" onclick="placeOrder()"><h2>Place Order</h2></button>
+    </div>
+
 </Flexbox>
 </body>
 </html>

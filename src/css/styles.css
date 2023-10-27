@@ -4,9 +4,7 @@ body {
     font-family: sans-serif;
     height: 250vh;
     list-style-type: none;
-    background: rgb(37,29,56);
-    background: linear-gradient(90deg, rgba(37,29,56,1) 0%, rgba(34,193,195,1) 50%, rgba(37,29,56,1) 100%);
-    scroll-behavior: smooth;
+    background: #131313;
 }
 html{
     scroll-behavior: smooth;
@@ -15,7 +13,23 @@ html{
 a {
     text-decoration: none;
     font-weight: 300;
-} h1 {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgb(55, 0, 255);
+} p {
+      color: rgb(255, 255, 255);
+      text-shadow: 2px 2px 5px rgb(55, 0, 255);
+      box-shadow: 0px 0px 24px 7px rgb(51, 32, 167);
+      font-size: 100%;
+
+  } .Logo {
+    border-radius: 10px;
+    background-color: #282828;
+    height: 100%;
+    width: 3%;
+    margin-left: 4px;
+    margin-bottom: 4px;
+      }
+h1 {
     font-size: 75px;
     font-weight: 1000;
     text-align: center;
@@ -24,32 +38,34 @@ a {
     text-shadow: 2px 2px 5px rgb(55, 0, 255);
     margin-bottom: -2%;
     padding-top: 1%;
-} .Axol {
-      width: 100%;
-      height: 25vh;
-      border: #5e3446 solid 1px;
-      border-radius: 50%;
-      box-shadow: 10px 10px 24px 7px rgb(144 14 66);
-  } h1 > back {
+} h2 {
+     color: rgb(255, 255, 255);
+     text-shadow: 2px 2px 5px rgb(55, 0, 255);
+}.Axol {
+    width: 100%;
+    max-width: 255px;
+    height: 40vh;
+    border-radius: 25px;
+    box-shadow: 0px 0px 24px 7px rgb(51, 32, 167);
+}  h1 > back {
         transition: .2s;
         text-decoration: none;
         color: white;
         border-bottom: purple 1px solid;
-    }
-section.spacing
+}  section.spacing
 {
    width: 100%;
    height: 100px;
-   border-bottom: 1px #22c1c3 solid;
+   border-bottom: 1px rgb(25,116,126) solid;
 }section.spacing2
  {
      width: 100%;
-     border-bottom: 1px #22c1c3 solid;
+     border-bottom: 1px rgb(25,116,126) solid;
  }
 section.spacing3
    {
        width: 25%;
-       border-bottom: 1px #22c1c3 solid;
+    border-bottom: 1px rgb(25,116,126) solid;
    }  .Mainbox {
     display: flex;
     flex-direction: row;
@@ -57,11 +73,12 @@ section.spacing3
     justify-content: center;
 }
 .data-box {
-    border: 1px solid black;
-    border-radius: 10%;
+    border: 2px solid rgba(36, 173, 175, 0.11);
+    border-radius: 25px;
     padding: 10px;
     margin: 10px;
     text-align: center;
+    background: radial-gradient(circle, rgba(45, 45, 73, 0.55) 7%, rgb(0, 27, 59) 100%);
 }.data-boxes {
      display: flex;
  }
@@ -73,16 +90,18 @@ section.spacing3
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
+
     z-index: 1;
     text-align: center;
+    cursor: pointer;
 }
 .popup-content {
-    background-color: #14d3d3;
+    background: #131313;
     width: 80%;
     max-width: 600px;
-    margin: 20px auto;
+    margin: 10% auto ;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 30px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -97,11 +116,11 @@ section.spacing3
     flex-wrap: nowrap;
     align-items: center;
     padding: 5px;
-    height: 50px;
+    height: 60px;
     border-radius: 10px;
     justify-content: flex-start;
     border: 1px solid #22c1c3;
-    margin-top: 0px;
+    margin-top: -5px;
   } .topnav img {
    height: 3.4em;
    margin-top: 8px;
@@ -115,7 +134,7 @@ section.spacing3
     padding-top: 11px;
     text-decoration: none;
     padding-left: 25px;
-    padding-right: 25px;
+    padding-right: 10px;
     float: right;
   } a:hover{
     text-decoration: none;
